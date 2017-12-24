@@ -2,7 +2,8 @@
 
 Merry Christmas in go, a color tree in terminal.
 
-![screen shot 2017-12-24 at 8 53 12 pm](https://user-images.githubusercontent.com/1459834/34326620-998a29da-e8ec-11e7-8394-615c1f2ed80d.png)
+![screen shot 2017-12-24 at 10 38 08 pm](https://user-images.githubusercontent.com/1459834/34327299-9dcd88e8-e8fb-11e7-9e62-a5679bc399b0.png)
+
 
 ### Installation
 
