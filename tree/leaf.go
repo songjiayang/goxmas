@@ -11,8 +11,11 @@ var (
 	leafSeedSize = len(leafSeed)
 )
 
-func leafContent() string {
+func init() {
 	rand.Seed(time.Now().UnixNano())
+}
+
+func leafContent() string {
 	return string(leafSeed[rand.Intn(leafSeedSize)])
 }
 

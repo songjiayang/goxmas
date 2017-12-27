@@ -20,12 +20,11 @@ func main() {
 
 	masTree := tree.NewTree(40, company)
 
-	if live {
-		for true {
-			masTree.Print()
-			time.Sleep(2 * time.Second)
-		}
-	} else {
+	for true {
 		masTree.Print()
+		if !live {
+			return
+		}
+		time.Sleep(2 * time.Second)
 	}
 }

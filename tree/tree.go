@@ -2,12 +2,13 @@ package tree
 
 import "fmt"
 
+// Tree definition
 type Tree struct {
 	company string
-
-	leaves [][]string
+	leaves  [][]string
 }
 
+// NewTree : generates a tree by given width, includes company into bottom row
 func NewTree(width int, company string) *Tree {
 	height := width / 2
 
@@ -27,8 +28,7 @@ func NewTree(width int, company string) *Tree {
 		}
 	}
 
-	leaves = append(leaves, bottomLeaves(width, "^"))
-	leaves = append(leaves, bottomLeaves(width, " "))
+	leaves = append(leaves, bottomLeaves(width, "^"), bottomLeaves(width, " "))
 
 	return &Tree{
 		leaves:  leaves,
@@ -36,6 +36,7 @@ func NewTree(width int, company string) *Tree {
 	}
 }
 
+// Print : prints the whole tree at once
 func (tree *Tree) Print() {
 	fmt.Println()
 
@@ -43,21 +44,21 @@ func (tree *Tree) Print() {
 		for _, leaf := range leaves {
 			switch leaf {
 			case "★":
-				yellowColor().Print(leaf)
+				yellowColor.Print(leaf)
 			default:
 				randomColor().Print(leaf)
 			}
 		}
 
-		fmt.Print("\n")
+		fmt.Println()
 	}
 
 	fmt.Println()
 
-	yellowColor().Print(tree.company)
-	redColor().Print(" loves")
-	yellowColor().Print(" you,")
-	redColor().Print(" Merry Christmas!")
+	yellowColor.Print(tree.company)
+	redColor.Print(" loves")
+	yellowColor.Print(" you,")
+	redColor.Print(" Merry Christmas!")
 
 	fmt.Println()
 	fmt.Println()
