@@ -15,7 +15,6 @@ var (
 func main() {
 	flag.StringVar(&company, "company", "goxmas", "what company to say Merry Christmas.")
 	flag.BoolVar(&live, "live", false, "Keep printing the tree.")
-
 	flag.Parse()
 
 	masTree := tree.NewTree(40, company)
